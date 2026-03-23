@@ -46,5 +46,8 @@ pred = model.predict(X_test)
 print("Classification Report:\n", classification_report(y_test, pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, pred))
 print("Accuracy Score:", accuracy_score(y_test, pred))
+print(X.columns.tolist())
+print(len(X.columns))
 
 pickle.dump(model, open("churn_model.pkl", "wb"))
+pickle.dump(scaler, open("scaler.pkl", "wb"))
